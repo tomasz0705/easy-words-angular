@@ -27,14 +27,14 @@ export class WordsService {
   }
 
   addNoun(value: WordType): void {
-    this.verbs.push(value);
+    this.nouns.push(value);
   }
 
   addVerb(value: WordType): void {
     this.verbs.push(value);
   }
 
-  check() {
+  check(): void {
     this.nouns.map(word => (word.correct = word.type === Type.NOUN));
     this.verbs.map(word => (word.correct = word.type === Type.VERB));
   }
